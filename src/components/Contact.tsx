@@ -1,6 +1,14 @@
 import { personalInfo } from "../data/portfolioData";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
 
 export default function Contact() {
   const ref = useScrollReveal();
@@ -105,7 +113,50 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <a
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="GitHub">
+              <Github size={20} />
+            </a>
+
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="LinkedIn">
+              <Linkedin size={20} />
+            </a>
+
+            <a
+              href={personalInfo.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="Facebook">
+              <Facebook size={20} />
+            </a>
+          </div>
+
           {/* CTA */}
+
           <a
             href={`mailto:${personalInfo.email}`}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105"

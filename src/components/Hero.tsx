@@ -1,5 +1,13 @@
 import { personalInfo } from "../data/portfolioData";
-import { MapPin, Mail, Download, ChevronDown } from "lucide-react";
+import {
+  MapPin,
+  Mail,
+  Download,
+  ChevronDown,
+  Github,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
 
 export default function Hero() {
   return (
@@ -16,7 +24,6 @@ export default function Hero() {
           className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-10 blur-3xl animate-pulse"
           style={{ background: "#a78bfa", animationDelay: "1s" }}
         />
-        {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -39,7 +46,7 @@ export default function Hero() {
               fontFamily: "'JetBrains Mono', monospace",
             }}>
             <span
-              className="w-2 h-2 rounded-full bg-accent animate-pulse"
+              className="w-2 h-2 rounded-full animate-pulse"
               style={{ background: "var(--accent)" }}
             />
             Available for opportunities
@@ -62,7 +69,7 @@ export default function Hero() {
           </h2>
 
           <p
-            className="leading-relaxed mb-8"
+            className="leading-relaxed mb-4"
             style={{ color: "var(--text-muted)" }}>
             {personalInfo.tagline}
           </p>
@@ -73,15 +80,12 @@ export default function Hero() {
             {personalInfo.summary}
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
+          {/* Location & Email */}
+          <div className="flex flex-wrap gap-4 mb-6">
             <div
               className="flex items-center gap-2 text-sm"
               style={{ color: "var(--text-muted)" }}>
-              <MapPin
-                size={14}
-                className="text-accent"
-                style={{ color: "var(--accent)" }}
-              />
+              <MapPin size={14} style={{ color: "var(--accent)" }} />
               {personalInfo.location}
             </div>
             <div
@@ -92,6 +96,49 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* Social Links */}
+          <div className="flex items-center gap-3 mb-8">
+            <a
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="GitHub">
+              <Github size={18} />
+            </a>
+
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="LinkedIn">
+              <Linkedin size={18} />
+            </a>
+
+            <a
+              href={personalInfo.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg border transition-all duration-200 hover:scale-110 hover:border-accent"
+              style={{
+                borderColor: "var(--border)",
+                color: "var(--text-muted)",
+              }}
+              aria-label="Facebook">
+              <Facebook size={18} />
+            </a>
+          </div>
+
+          {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <a
               href={`mailto:${personalInfo.email}`}
@@ -109,7 +156,7 @@ export default function Hero() {
                   .getElementById("projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-6 py-3 rounded-lg font-semibold text-sm border transition-all duration-200 hover:bg-accent hover:text-night-950"
+              className="px-6 py-3 rounded-lg font-semibold text-sm border transition-all duration-200 hover:opacity-90"
               style={{
                 borderColor: "var(--accent)",
                 color: "var(--accent)",
@@ -117,6 +164,7 @@ export default function Hero() {
               }}>
               View Projects
             </button>
+
             <a
               href="/judi.portfolio/judi.arevalo.resume.pdf"
               download
@@ -140,7 +188,6 @@ export default function Hero() {
               background: "var(--bg-card)",
               border: "1px solid var(--border)",
             }}>
-            {/* Decorative ring */}
             <div
               className="absolute inset-0 rounded-2xl animate-pulse"
               style={{
@@ -149,8 +196,6 @@ export default function Hero() {
                 scale: "1.05",
               }}
             />
-
-            {/* Initials display */}
             <div className="text-center">
               <div
                 className="w-28 h-28 rounded-2xl flex items-center justify-center text-4xl font-bold mb-4 mx-auto"
@@ -173,7 +218,6 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Floating badges */}
             <div
               className="absolute -top-4 -right-4 px-3 py-1.5 rounded-full text-xs font-medium shadow-lg"
               style={{

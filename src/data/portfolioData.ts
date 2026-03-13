@@ -10,6 +10,8 @@ export const personalInfo = {
   email: "judithekuletz.ja@gmail.com",
   phone: "+63 930 393 0875",
   github: "https://github.com/makuletz17",
+  linkedin: "https://www.linkedin.com/in/judi-arevalo-992b19187/",
+  facebook: "https://www.facebook.com/judithekuletz",
 };
 
 export const expertise = [
