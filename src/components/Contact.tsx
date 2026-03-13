@@ -1,6 +1,6 @@
 import { personalInfo } from "../data/portfolioData";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { Mail, Phone, MapPin, Github, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
   const ref = useScrollReveal();

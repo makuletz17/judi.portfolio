@@ -111,6 +111,18 @@ export default function Hero() {
               }}>
               View Projects
             </button>
+            <a
+              href="/judi.portfolio/judi.arevalo.resume.pdf"
+              download
+              className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm border transition-all duration-200 hover:opacity-90"
+              style={{
+                borderColor: "#a78bfa",
+                color: "#a78bfa",
+                fontFamily: "'Syne', sans-serif",
+              }}>
+              <Download size={14} />
+              Download CV
+            </a>
           </div>
         </div>
 
