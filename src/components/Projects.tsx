@@ -28,7 +28,7 @@ export default function Projects() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, i) => (
+            {projects.map((project) => (
               <div
                 key={project.title}
                 className="card-hover p-6 rounded-xl group">
