@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./hooks/scrollToTop";
 
 export default function App() {
   const [dark, setDark] = useDarkMode();
@@ -20,6 +21,7 @@ export default function App() {
         <Experience />
         <Contact />
         <Footer />
+        <ScrollToTop />
       </div>
     </div>
   );
