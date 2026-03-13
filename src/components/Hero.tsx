@@ -67,6 +67,12 @@ export default function Hero() {
             {personalInfo.tagline}
           </p>
 
+          <p
+            className="leading-relaxed mb-8 text-sm"
+            style={{ color: "var(--text-muted)" }}>
+            {personalInfo.summary}
+          </p>
+
           <div className="flex flex-wrap gap-4 mb-8">
             <div
               className="flex items-center gap-2 text-sm"
