@@ -42,7 +42,6 @@ export default function Hero() {
             style={{
               background: "var(--accent-glow)",
               borderColor: "var(--accent)",
-              color: "#ffffff",
               fontFamily: "'JetBrains Mono', monospace",
             }}>
             <span
