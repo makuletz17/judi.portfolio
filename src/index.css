@@ -13,7 +13,7 @@
         --text-muted: #64748b;
         --border: #e2e8f0;
         --accent: #0ea5e9;
-        --accent-glow: rgba(14, 165, 233, 0.2);
+        --accent-glow: rgba(255, 255, 255, 0.1);
     }
 
     .dark {
@@ -23,8 +23,8 @@
         --text: #e2e8f0;
         --text-muted: #94a3b8;
         --border: #1e293b;
-        --accent: #64ffda;
-        --accent-glow: rgba(100, 255, 218, 0.15);
+        --accent: #94a3b8;
+        --accent-glow: rgba(255, 255, 255, 0.1);
     }
 
     html {
@@ -72,7 +72,7 @@
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--accent), #a78bfa);
+    background: linear-gradient(135deg, var(--accent), #e4e6e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

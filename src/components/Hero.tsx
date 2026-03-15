@@ -17,11 +17,11 @@ export default function Hero() {
       {/* Animated background blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl animate-pulse"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl "
           style={{ background: "var(--accent)" }}
         />
         <div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-10 blur-3xl animate-pulse"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-10 blur-3xl "
           style={{ background: "#a78bfa", animationDelay: "1s" }}
         />
         <div
@@ -42,11 +42,11 @@ export default function Hero() {
             style={{
               background: "var(--accent-glow)",
               borderColor: "var(--accent)",
-              color: "var(--accent)",
+              color: "#ffffff",
               fontFamily: "'JetBrains Mono', monospace",
             }}>
             <span
-              className="w-2 h-2 rounded-full animate-pulse"
+              className="w-2 h-2 rounded-full"
               style={{ background: "var(--accent)" }}
             />
             Available for opportunities
@@ -56,7 +56,9 @@ export default function Hero() {
             className="text-5xl md:text-6xl font-bold leading-tight mb-4"
             style={{ fontFamily: "'Syne', sans-serif" }}>
             Hi, I'm{" "}
-            <span className="gradient-text">{personalInfo.nickname}</span>
+            <span style={{ color: "var(--accent)" }}>
+              {personalInfo.nickname}
+            </span>
           </h1>
 
           <h2
@@ -189,7 +191,7 @@ export default function Hero() {
               border: "1px solid var(--border)",
             }}>
             <div
-              className="absolute inset-0 rounded-2xl animate-pulse"
+              className="absolute inset-0 rounded-2xl"
               style={{
                 border: "1px solid var(--accent)",
                 opacity: 0.3,
@@ -243,7 +245,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <ChevronDown size={20} style={{ color: "var(--text-muted)" }} />
       </div>
     </section>
